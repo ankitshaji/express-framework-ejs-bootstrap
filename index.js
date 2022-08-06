@@ -93,3 +93,6 @@ app.get("/cats", (req, res) => {
 //download + add min.css min.js from bootstrap
 //pass in min.css, min.js files ejs ,ejs puts it as link and script in ejs file
 //bootsrap min.js requires/depends on jQuery library - download jQuery.js + add to public/js directory
+//partials/includes directory - <%- %>
+//- contains common/duplicating ejs markup/code
+//- including sub ejs template in other ejs template
