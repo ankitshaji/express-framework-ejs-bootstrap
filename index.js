@@ -13,7 +13,8 @@ app.set("view engine", "ejs"); //auto require("ejs")
 //we can also change it to use currentDirectoryPath of index.html insted- due to not finding views directory when executing from outside this directory eg-cd..
 app.set("views", path.join(__dirname, "/views")); //object.method(currentDirectoryPath,"/directoryName") //combines strings
 
-//serving static files - found in directoryName - making it available in ejs files + localhost:3000/style.css
+//serving static files - found in directoryName - making it available in ejs files + localhost:3000/file.css
+//contains downloaded boostrap library files - min.css,min.js
 //unlike default app.use(callback) - no callback argument to execute when any httpMethod/any httpStructured request
 //comes in to localhost:3000 or any /resource path ,instead execute the argument
 //appObject.method(expressObject.method("assetsDirectoryName"))
@@ -88,3 +89,7 @@ app.get("/cats", (req, res) => {
 //.css,.js and otherfile(image) - instead of just .html http strucuted response
 //using middleware function - runs between httpStructuredRequest coming in and httpStructuredResponse going out
 //express.static("assetsDirectoryName") Object.method(argument) //uses nodejs runtime directory//fix above sets to current directory of index.html
+//Adding bootstrap v4.5.3 library in public directory -
+//download + add min.css min.js from bootstrap
+//pass in min.css, min.js files ejs ,ejs puts it as link and script in ejs file
+//bootsrap min.js requires/depends on jQuery library - download jQuery.js + add to public/js directory
